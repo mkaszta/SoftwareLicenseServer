@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using static SoftwareLicenseServer.Models.LicensingModels;
 
 namespace SoftwareLicenseServer.Models
 {
@@ -29,5 +30,10 @@ namespace SoftwareLicenseServer.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Apps> Apps { get; set; }
+        public DbSet<Contractors> Contractors { get; set; }
+        public DbSet<Licenses> Licenses { get; set; }
+        public DbSet<Sessions> Sessions { get; set; }
     }
 }

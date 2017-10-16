@@ -92,9 +92,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SoftwareLicenseServer\SoftwareLicenseServer.csproj">
+    <ProjectReference Include="..\SoftwareLicenseServer\1. SoftwareLicenseServer.csproj">
       <Project>{8B8817CB-30BB-482F-A0F1-047BA53020F9}</Project>
-      <Name>SoftwareLicenseServer</Name>
+      <Name>1. SoftwareLicenseServer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
