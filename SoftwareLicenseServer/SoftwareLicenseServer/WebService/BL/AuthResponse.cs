@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace SoftwareLicenseServer.WebService.BL
 {
     [Serializable]
     [DataContract]
-    public class Auth
+    public class AuthResponse
     {
         [DataMember]
         public bool IsAuthorized { get; set; }
@@ -13,9 +14,13 @@ namespace SoftwareLicenseServer.WebService.BL
         [DataMember]
         public DateTime ExpirationDate { get; set; }
 
-        public Auth()
+        [DataMember]
+        public List<string> Details { get; set; }
+
+        public AuthResponse()
         {
-            IsAuthorized = false;
+            this.IsAuthorized = false;
+            this.Details = new List<string>();           
         }
     }
 }

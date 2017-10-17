@@ -36,7 +36,7 @@ namespace SoftwareLicenseServer.Models
             public int Lic_Id { get; set; }
             public int Ctr_Id { get; set; }
             public int App_Id { get; set; }
-            [StringLength(50)]
+            [StringLength(128)]
             public string Lic_Key { get; set; }
             public int Lic_ActivationStatus { get; set; }
             public DateTime Lic_ActivationDate { get; set; }

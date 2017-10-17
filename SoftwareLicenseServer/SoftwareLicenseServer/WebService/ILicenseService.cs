@@ -14,9 +14,9 @@ namespace SoftwareLicenseServer.WebService
     public interface ILicenseService
     {
         [OperationContract]
-        Auth GetLicense(string appKey);
+        AuthResponse GetAuthorization(AuthRequest authRequest);
 
         [OperationContract]
-        IList<Licenses> GetAllLicenses();
+        byte[] DownloadFile(string fileName);
     }
 }

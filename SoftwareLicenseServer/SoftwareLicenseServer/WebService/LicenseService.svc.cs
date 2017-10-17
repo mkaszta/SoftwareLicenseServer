@@ -1,6 +1,7 @@
 ﻿using SoftwareLicenseServer.WebService.BL;
 using System.Collections.Generic;
 using static SoftwareLicenseServer.Models.LicensingModels;
+using System;
 
 namespace SoftwareLicenseServer.WebService
 {
@@ -15,14 +16,14 @@ namespace SoftwareLicenseServer.WebService
             _authService = new AuthService();
         }
 
-        public IList<Licenses> GetAllLicenses()
+        public byte[] DownloadFile(string fileName)
         {
-            return _authService.GetAllLicenses();
+            return this._authService.DownloadFile(fileName);
         }
 
-        public Auth GetLicense(string appKey)
+        public AuthResponse GetAuthorization(AuthRequest authRequest)
         {
-            return this._authService.GetLicense(appKey);
-        }
+            return this._authService.GetAuthorization(authRequest);
+        }        
     }
 }
