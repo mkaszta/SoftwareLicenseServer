@@ -63,13 +63,13 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServiceReference\LicenseService1.wsdl" />
-    <None Include="Service References\ServiceReference\LicenseService4.xsd">
+    <None Include="Service References\ServiceReference\LicenseService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference\LicenseService42.xsd">
+    <None Include="Service References\ServiceReference\LicenseService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference\LicenseService43.xsd">
+    <None Include="Service References\ServiceReference\LicenseService3.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

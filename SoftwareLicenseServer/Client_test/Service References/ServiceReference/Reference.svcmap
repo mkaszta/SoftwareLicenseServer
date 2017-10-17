@@ -19,15 +19,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:53875/webservice/licenseservice.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://localhost:44353/webservice/licenseservice.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="LicenseService4.xsd" MetadataType="Schema" ID="776af5ab-65d6-44a8-8813-407ff117925e" SourceId="1" SourceUrl="http://localhost:53875/webservice/LicenseService.svc?xsd=xsd2" />
-    <MetadataFile FileName="LicenseService.xsd" MetadataType="Schema" ID="5d52ca64-d9ab-4fe7-8de2-5300c1007a85" SourceId="1" SourceUrl="http://localhost:53875/webservice/LicenseService.svc?xsd=xsd3" />
-    <MetadataFile FileName="LicenseService1.wsdl" MetadataType="Wsdl" ID="5b96fd56-1fb2-4abb-b63a-89aec3507b4e" SourceId="1" SourceUrl="http://localhost:53875/webservice/LicenseService.svc?wsdl" />
-    <MetadataFile FileName="LicenseService1.disco" MetadataType="Disco" ID="ed9513fa-07c0-4eaf-9437-b35737d4c411" SourceId="1" SourceUrl="http://localhost:53875/webservice/LicenseService.svc?disco" />
-    <MetadataFile FileName="LicenseService42.xsd" MetadataType="Schema" ID="f0b3d07b-03e1-4911-b6c0-863ac79012d3" SourceId="1" SourceUrl="http://localhost:53875/webservice/LicenseService.svc?xsd=xsd0" />
-    <MetadataFile FileName="LicenseService43.xsd" MetadataType="Schema" ID="ac42d0ec-60f1-4a34-8ff0-c6ff1ada3ce6" SourceId="1" SourceUrl="http://localhost:53875/webservice/LicenseService.svc?xsd=xsd1" />
+    <MetadataFile FileName="LicenseService.xsd" MetadataType="Schema" ID="4c84ea46-6933-48e3-8533-4dc502e302b7" SourceId="1" SourceUrl="https://localhost:44353/webservice/LicenseService.svc?xsd=xsd1" />
+    <MetadataFile FileName="LicenseService1.xsd" MetadataType="Schema" ID="93b307e3-c4ee-4b9c-a97a-e39c16cae91c" SourceId="1" SourceUrl="https://localhost:44353/webservice/LicenseService.svc?xsd=xsd0" />
+    <MetadataFile FileName="LicenseService2.xsd" MetadataType="Schema" ID="d9b54ce2-85e8-4386-83c3-6537b23cfd2c" SourceId="1" SourceUrl="https://localhost:44353/webservice/LicenseService.svc?xsd=xsd3" />
+    <MetadataFile FileName="LicenseService3.xsd" MetadataType="Schema" ID="28dd822d-20ce-4ab3-823d-ee1882ba3bf7" SourceId="1" SourceUrl="https://localhost:44353/webservice/LicenseService.svc?xsd=xsd2" />
+    <MetadataFile FileName="LicenseService1.wsdl" MetadataType="Wsdl" ID="80b26402-2c52-4f53-a8f6-595998785ce4" SourceId="1" SourceUrl="https://localhost:44353/webservice/LicenseService.svc?wsdl" />
+    <MetadataFile FileName="LicenseService1.disco" MetadataType="Disco" ID="f6b8786f-bc5e-406c-beaa-da8aa1c4aac0" SourceId="1" SourceUrl="https://localhost:44353/webservice/LicenseService.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
