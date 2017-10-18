@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareLicenseServer.Tests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. Cipher_API", "CipherAPI\2. Cipher_API.csproj", "{49CC766D-2484-43A0-A79C-51B709DA577A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. Client_TEST", "Client_test\3. Client_TEST.csproj", "{1F101165-C54F-4EF2-84DD-8854EE1FB0C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. Client_CONNECTOR", "Client_test\3. Client_CONNECTOR.csproj", "{1F101165-C54F-4EF2-84DD-8854EE1FB0C8}"
 	ProjectSection(ProjectDependencies) = postProject
 		{8B8817CB-30BB-482F-A0F1-047BA53020F9} = {8B8817CB-30BB-482F-A0F1-047BA53020F9}
 	EndProjectSection

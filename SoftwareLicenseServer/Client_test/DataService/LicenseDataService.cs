@@ -1,11 +1,11 @@
-﻿using Client_test.ServiceReference;
+﻿using Client_CONNECTOR.ServiceReference;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Client_test.DataService
+namespace Client_CONNECTOR.DataService
 {
     class LicenseDataService
     {
@@ -16,14 +16,14 @@ namespace Client_test.DataService
             this._client = new LicenseServiceClient();
         }
 
-        public AuthResponse GetAuth(AuthRequest authRequest)
+        public AuthResponse GetAuthorization(AuthRequest authRequest)
         {
             return this._client.GetAuthorization(authRequest);
         }
 
-        public byte[] DownloadFile(string fileName)
+        public byte[] DownloadLicense(AuthRequest authRequest)
         {
-            return this._client.DownloadFile(fileName);
+            return this._client.DownloadLicense(authRequest);
         }
     }
 }

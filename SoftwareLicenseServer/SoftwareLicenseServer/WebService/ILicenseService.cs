@@ -17,6 +17,6 @@ namespace SoftwareLicenseServer.WebService
         AuthResponse GetAuthorization(AuthRequest authRequest);
 
         [OperationContract]
-        byte[] DownloadFile(string fileName);
+        byte[] DownloadLicense(AuthRequest authRequest);
     }
 }

@@ -6,6 +6,7 @@ using static SoftwareLicenseServer.Models.LicensingModels;
 using CipherAPI;
 using System.IO;
 using System.Web;
+using System.Xml.Serialization;
 
 namespace SoftwareLicenseServer.WebService.BL
 {
@@ -28,7 +29,7 @@ namespace SoftwareLicenseServer.WebService.BL
 
             try
             {
-                license = this._lstLicenses.Where(l => AES.Decrypt(l.Lic_Key, "test") == AES.Decrypt(request.AppKey, "test")).FirstOrDefault();
+                license = this._lstLicenses.Where(l => AES_Helper.Decrypt(l.Lic_Key, "test") == AES_Helper.Decrypt(request.AppKey, "test")).FirstOrDefault();
 
                 if (license != null)
                 {
@@ -60,7 +61,7 @@ namespace SoftwareLicenseServer.WebService.BL
                         if (license.Apps.App_Version != request.AppVersion)
                         {
                             errorCounter += 1;
-                            response.Details.Add(string.Format("The license key is not intended to this version of {0}.", request.AppName));                            
+                            response.Details.Add(string.Format("The license key is not intended to this version of {0}.", request.AppName));
                         }
                     }
                 }
@@ -79,28 +80,44 @@ namespace SoftwareLicenseServer.WebService.BL
                 else
                 {
                     response.IsAuthorized = false;
-                }                
+                }
             }
             catch (Exception ex)
             {
-                response.Details.Add(string.Format("There was an error getting authorization: {0}", ex.Message));                
+                response.Details.Add(string.Format("There was an error getting authorization: {0}", ex.Message));
             }
 
             return response;
         }
 
-        public byte[] DownloadFile(string fileName)
+        public byte[] DownloadLicense(AuthRequest authRequest)
         {
+            AuthResponse authResponse = this.GetAuthorization(authRequest);
             string relativePath = HttpContext.Current.Server.MapPath("~/");
+            string fileName = string.Empty;
 
-            FileStream fs = File.Open(string.Format("{0}/WebService/TestFiles/{1}", relativePath, fileName), FileMode.Open, FileAccess.Read);
+            if (authResponse.IsAuthorized)
+            {
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(AuthResponse));
 
-            byte[] bytes = new byte[fs.Length];
+                fileName = string.Format("{0}_{1}_{2}.xml", authRequest.AppName, authRequest.AppVersion, authRequest.OwnersNIP);
 
-            fs.Read(bytes, 0, (int)fs.Length);
-            fs.Close();
+                TextWriter writeFileStream = new StreamWriter(string.Format("{0}/WebService/TestFiles/{1}", relativePath, fileName));
+                xmlSerializer.Serialize(writeFileStream, authResponse);
+                writeFileStream.Close();
 
-            return bytes;
+                FileStream fs = File.Open(string.Format("{0}/WebService/TestFiles/{1}", relativePath, fileName), FileMode.Open, FileAccess.Read);
+                byte[] bytes = new byte[fs.Length];
+
+                fs.Read(bytes, 0, (int)fs.Length);
+                fs.Close();
+
+                return bytes;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Client_test.ServiceReference {
+namespace Client_CONNECTOR.ServiceReference {
     using System.Runtime.Serialization;
     using System;
     
@@ -204,25 +204,25 @@ namespace Client_test.ServiceReference {
     public interface ILicenseService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILicenseService/GetAuthorization", ReplyAction="http://tempuri.org/ILicenseService/GetAuthorizationResponse")]
-        Client_test.ServiceReference.AuthResponse GetAuthorization(Client_test.ServiceReference.AuthRequest authRequest);
+        Client_CONNECTOR.ServiceReference.AuthResponse GetAuthorization(Client_CONNECTOR.ServiceReference.AuthRequest authRequest);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILicenseService/GetAuthorization", ReplyAction="http://tempuri.org/ILicenseService/GetAuthorizationResponse")]
-        System.Threading.Tasks.Task<Client_test.ServiceReference.AuthResponse> GetAuthorizationAsync(Client_test.ServiceReference.AuthRequest authRequest);
+        System.Threading.Tasks.Task<Client_CONNECTOR.ServiceReference.AuthResponse> GetAuthorizationAsync(Client_CONNECTOR.ServiceReference.AuthRequest authRequest);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILicenseService/DownloadFile", ReplyAction="http://tempuri.org/ILicenseService/DownloadFileResponse")]
-        byte[] DownloadFile(string fileName);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILicenseService/DownloadLicense", ReplyAction="http://tempuri.org/ILicenseService/DownloadLicenseResponse")]
+        byte[] DownloadLicense(Client_CONNECTOR.ServiceReference.AuthRequest authRequest);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILicenseService/DownloadFile", ReplyAction="http://tempuri.org/ILicenseService/DownloadFileResponse")]
-        System.Threading.Tasks.Task<byte[]> DownloadFileAsync(string fileName);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILicenseService/DownloadLicense", ReplyAction="http://tempuri.org/ILicenseService/DownloadLicenseResponse")]
+        System.Threading.Tasks.Task<byte[]> DownloadLicenseAsync(Client_CONNECTOR.ServiceReference.AuthRequest authRequest);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ILicenseServiceChannel : Client_test.ServiceReference.ILicenseService, System.ServiceModel.IClientChannel {
+    public interface ILicenseServiceChannel : Client_CONNECTOR.ServiceReference.ILicenseService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class LicenseServiceClient : System.ServiceModel.ClientBase<Client_test.ServiceReference.ILicenseService>, Client_test.ServiceReference.ILicenseService {
+    public partial class LicenseServiceClient : System.ServiceModel.ClientBase<Client_CONNECTOR.ServiceReference.ILicenseService>, Client_CONNECTOR.ServiceReference.ILicenseService {
         
         public LicenseServiceClient() {
         }
@@ -243,20 +243,20 @@ namespace Client_test.ServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public Client_test.ServiceReference.AuthResponse GetAuthorization(Client_test.ServiceReference.AuthRequest authRequest) {
+        public Client_CONNECTOR.ServiceReference.AuthResponse GetAuthorization(Client_CONNECTOR.ServiceReference.AuthRequest authRequest) {
             return base.Channel.GetAuthorization(authRequest);
         }
         
-        public System.Threading.Tasks.Task<Client_test.ServiceReference.AuthResponse> GetAuthorizationAsync(Client_test.ServiceReference.AuthRequest authRequest) {
+        public System.Threading.Tasks.Task<Client_CONNECTOR.ServiceReference.AuthResponse> GetAuthorizationAsync(Client_CONNECTOR.ServiceReference.AuthRequest authRequest) {
             return base.Channel.GetAuthorizationAsync(authRequest);
         }
         
-        public byte[] DownloadFile(string fileName) {
-            return base.Channel.DownloadFile(fileName);
+        public byte[] DownloadLicense(Client_CONNECTOR.ServiceReference.AuthRequest authRequest) {
+            return base.Channel.DownloadLicense(authRequest);
         }
         
-        public System.Threading.Tasks.Task<byte[]> DownloadFileAsync(string fileName) {
-            return base.Channel.DownloadFileAsync(fileName);
+        public System.Threading.Tasks.Task<byte[]> DownloadLicenseAsync(Client_CONNECTOR.ServiceReference.AuthRequest authRequest) {
+            return base.Channel.DownloadLicenseAsync(authRequest);
         }
     }
 }

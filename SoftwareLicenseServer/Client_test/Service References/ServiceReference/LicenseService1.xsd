@@ -15,17 +15,17 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="DownloadFile">
+  <xs:element name="DownloadLicense">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="fileName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SoftwareLicenseServer.WebService.BL" minOccurs="0" name="authRequest" nillable="true" type="q3:AuthRequest" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="DownloadFileResponse">
+  <xs:element name="DownloadLicenseResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="DownloadFileResult" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="DownloadLicenseResult" nillable="true" type="xs:base64Binary" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -7,8 +7,8 @@
     <ProjectGuid>{1F101165-C54F-4EF2-84DD-8854EE1FB0C8}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Client_test</RootNamespace>
-    <AssemblyName>Client_test</AssemblyName>
+    <RootNamespace>Client_CONNECTOR</RootNamespace>
+    <AssemblyName>Client_CONNECTOR</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -56,7 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Service References\ServiceReference\Client_test.ServiceReference.AuthResponse.datasource">
+    <None Include="Service References\ServiceReference\Client_CONNECTOR.ServiceReference.AuthResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceReference\LicenseService.xsd">

@@ -16,9 +16,9 @@ namespace SoftwareLicenseServer.WebService
             _authService = new AuthService();
         }
 
-        public byte[] DownloadFile(string fileName)
+        public byte[] DownloadLicense(AuthRequest authRequest)
         {
-            return this._authService.DownloadFile(fileName);
+            return this._authService.DownloadLicense(authRequest);
         }
 
         public AuthResponse GetAuthorization(AuthRequest authRequest)
